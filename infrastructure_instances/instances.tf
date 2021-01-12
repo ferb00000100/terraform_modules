@@ -22,11 +22,11 @@ resource "aws_volume_attachment" "net_tools_att" {
 
 resource "aws_ebs_volume" "tools_vg" {
   availability_zone = "us-east-1c"
-  size              = 105
+  size              = 305
   encrypted = true
 
   tags = {
-    Name = "tools"
+    Name =var.environment
     Owner = var.email
   }
 }
@@ -41,45 +41,8 @@ resource "aws_instance" "net_tools" {
   key_name = aws_key_pair.infra-key.id
   security_groups = [var.aws_security_group_id]
 
-  connection {
-    type = "ssh"
-    host = self.public_ip
-    user = "centos"
-    private_key = var.private_key_path
-  }
-
-  provisioner "file" {
-    source = "~/packages/RHEL-CentOS7-6602.rpm"
-    destination = "/tmp/RHEL-CentOS7-6602.rpm"
-  }
-
-  provisioner "file" {
-    source = "~/packages/cs.falconhoseclient-2.4.0+001-1.el7.x86_64.rpm"
-    destination = "/tmp/cs.falconhoseclient-2.4.0+001-1.el7.x86_64.rpm"
-  }
-
-  provisioner "file" {
-    source = "~/packages/SumoCollector-19.308-12.x86_64.rpm"
-    destination = "/tmp/SumoCollector-19.308-12.x86_64.rpm"
-  }
-
-  provisioner "file" {
-    source = "~/packages/aws_auth.py"
-    destination = "/tmp/aws_auth.py"
-  }
-
-  provisioner "file" {
-    source = "~/packages/cs_config.py"
-    destination = "/tmp/cs_config.py"
-  }
-
-  provisioner "file" {
-    source = "/Users/jmartin/.aws/credentials"
-    destination = "/tmp/credentials"
-  }
-
   tags = {
-    Name = "tools"
+    Name = var.environment
     Owner = var.email
   }
 }

@@ -22,3 +22,6 @@ variable "aws_security_group_id" {
 variable "email" {
   description = "email of owner for tags"
 }
+
+variable "namespace" {
+}

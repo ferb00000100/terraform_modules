@@ -10,6 +10,20 @@ resource "aws_security_group" "infrastructure_sg" {
     cidr_blocks = var.cidr_block_priv
   }
 
+//  ingress {
+//    from_port = 0
+//    to_port = 0
+//    protocol = "-1"
+//    cidr_blocks = ["0.0.0.0/0"]
+//  }
+//
+//  ingress {
+//    from_port = 80
+//    to_port = 80
+//    protocol = "tcp"
+//    cidr_blocks = ["0.0.0.0/0"]
+//  }
+
   ingress {
     from_port   = 22
     to_port     = 22
@@ -26,11 +40,17 @@ resource "aws_security_group" "infrastructure_sg" {
 
 
   tags = {
-    name = "tools"
-    service = "scripting"
+    name = var.namespace
     owner = var.email
-    environment = terraform.workspace
+    environment = var.environment
     contact = var.email
 
   }
 }
+
+//ingress {
+//  from_port = "0"
+//  to_port = "0"
+//  protocol = "t-1"
+//  cidr_blocks = ["0.0.0.0/0"]
+//}
