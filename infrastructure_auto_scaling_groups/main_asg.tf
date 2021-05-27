@@ -30,23 +30,39 @@ resource "aws_launch_configuration" "infra-lc" {
 }
 
 resource "aws_placement_group" "security" {
-  name = "infra-asg"
+  name = "infra-tst-asg"
   strategy = "spread"
 }
 
-resource "aws_autoscaling_group" "infa-asg" {
-  name = "infra-asg"
+resource "aws_autoscaling_group" "infra-asg" {
+  name = "infra-tst-asg"
   launch_configuration = aws_launch_configuration.infra-lc.id
   placement_group = aws_placement_group.security.id
   vpc_zone_identifier = [var.aws_subnet_id]
-  max_size = "3"
+  max_size = "7"
   min_size = "1"
-  desired_capacity = "2"
+  desired_capacity = "1"
+
 //  force_delete = true
 //  termination_policies = ["OldestInstance"]
   tag {
-    key ="Name"
-    value = "infa"
+    key ="Owner"
+    value = var.email
     propagate_at_launch = true
+  }
+  tag {
+    key ="Name"
+    value = "infra-tst-asg"
+    propagate_at_launch = true
+  }
+  tag {
+    key = "R7Exempt"
+    propagate_at_launch = true
+    value = "Yes"
+  }
+  tag {
+    key = "CSExempt"
+    propagate_at_launch = true
+    value = "Yes"
   }
 }

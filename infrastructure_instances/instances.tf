@@ -22,7 +22,7 @@ resource "aws_volume_attachment" "net_tools_att" {
 
 resource "aws_ebs_volume" "tools_vg" {
   availability_zone = "us-east-1c"
-  size              = 305
+  size              = 105
   encrypted = true
 
   tags = {
@@ -36,7 +36,7 @@ resource "aws_instance" "net_tools" {
   instance_type = var.instance_type
   subnet_id = var.aws_subnet_id
   vpc_security_group_ids = [var.aws_security_group_id]
-  associate_public_ip_address = true
+  associate_public_ip_address = false
   user_data = data.template_file.instance_config.rendered
   key_name = aws_key_pair.infra-key.id
   security_groups = [var.aws_security_group_id]
@@ -44,6 +44,8 @@ resource "aws_instance" "net_tools" {
   tags = {
     Name = var.environment
     Owner = var.email
+    R7Exempt = "Yes"
+    CSExempt ="Yes"
   }
 }
 

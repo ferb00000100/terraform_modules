@@ -3,9 +3,9 @@ variable "namespace" {
   description = "Service Naming"
 }
 
-variable "vpc_id" {
-  description = "The VPC ID"
-}
+//variable "vpc_id" {
+//  description = "The VPC ID"
+//}
 
 variable "availability_zone" {
   description = "The VPC ID"
@@ -20,4 +20,12 @@ variable "owner" {
 }
 variable "email" {
   description = "email of owner for tags"
+}
+
+variable "aws_security_group_id" {
+  default = ""
+}
+
+variable "aws_instance_id" {
+  default = ""
 }
