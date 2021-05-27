@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00756044-b3cf-4f5b-b143-884e433b6ce8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/infrastructure_auto_scaling_groups/output.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serverless_infrastructure_lambda/lambda.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serverless_infrastructure_lambda/lambda_layers.tf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serverless_infrastructure_lambda/variables.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure_auto_scaling_groups/main_asg.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure_auto_scaling_groups/main_asg.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure_aws_defaults/aws.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure_aws_defaults/aws.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure_aws_defaults/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure_aws_defaults/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure_backends/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure_backends/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure_instances/instances.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure_instances/instances.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure_networking/networking.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure_networking/networking.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure_networking/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure_networking/outputs.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure_networking/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure_networking/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure_security/output.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure_security/output.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure_security/security_groups.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure_security/security_groups.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure_security/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure_security/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +86,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -162,7 +160,7 @@
       <workItem from="1620915562467" duration="11966000" />
       <workItem from="1621542371430" duration="2151000" />
       <workItem from="1621863618799" duration="2821000" />
-      <workItem from="1622048640176" duration="1637000" />
+      <workItem from="1622048640176" duration="2236000" />
     </task>
     <servers />
   </component>
